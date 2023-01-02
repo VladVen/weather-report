@@ -33,7 +33,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +57,7 @@
   },
   "devDependencies": {
     "@types/react-test-renderer": "^18.0.0",
+    "gh-pages": "^4.0.0",
     "react-test-renderer": "^18.2.0"
   }
 }
