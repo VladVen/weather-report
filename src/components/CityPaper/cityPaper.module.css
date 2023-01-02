@@ -21,3 +21,19 @@
 .rightSide > div {
   text-align: end;
 }
+
+@media screen and (max-width: 400px){
+  .paper {
+    margin-top: 10px;
+    padding: 15px 25px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .rightSide > div {
+    text-align: center;
+  }
+}

@@ -41,9 +41,9 @@ export const CityPaper: FC<ICityPaper> = ({ onSave, id }) => {
           <FavoriteIcon sx={{ color: saved ? "red" : "white" }} onClick={(event) => saveHandler(event)} />
         </div>
         <div className={styles.rightSide}>
-          <div>{data.name}</div>
+          <div>City: {data.name}</div>
           <div>Country: {data.sys.country}</div>
-          <div>{data.weather[0].main}</div>
+          <div>Weather: {data.weather[0].main}</div>
           <div>{data.weather[0].description}</div>
         </div>
       </Paper>
