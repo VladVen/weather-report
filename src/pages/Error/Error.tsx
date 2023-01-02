@@ -1,7 +1,8 @@
 import React from "react";
 
+
 const Error = () => {
-  return <div>Error</div>;
+  return <h1 className={'error'}>Sorry, this path, doesn't exist</h1>;
 };
 
 export default Error;

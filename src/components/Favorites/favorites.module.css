@@ -11,6 +11,6 @@
 
 .container > div {
   padding: 10px 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 700px;
 }
