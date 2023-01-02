@@ -9,6 +9,7 @@
 
 @media screen and (max-width: 580px){
   .paper {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px
