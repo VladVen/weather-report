@@ -14,7 +14,7 @@ export const CityPaper: FC<ICityPaper> = ({ onSave, id }) => {
   const [saved, setSaved] = useState<boolean>(localStorage[id] === id);
   const { data } = cityAPI.useFetchCityByIdQuery(id);
 
-  const saveHandler = (event: React.MouseEvent<HTMLElement>) => {
+  const saveHandler = (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
     event.preventDefault();
     setSaved((prevState) => !prevState);
     onSave(id);
@@ -37,8 +37,8 @@ export const CityPaper: FC<ICityPaper> = ({ onSave, id }) => {
           </div>
           <div>Feels like: {data.main.feels_like} °C</div>
         </div>
-        <div id={"save"} onClick={(event) => saveHandler(event)}>
-          <FavoriteIcon sx={{ color: saved ? "red" : "white" }} />
+        <div>
+          <FavoriteIcon sx={{ color: saved ? "red" : "white" }} onClick={(event) => saveHandler(event)} />
         </div>
         <div className={styles.rightSide}>
           <div>{data.name}</div>
