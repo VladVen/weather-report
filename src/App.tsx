@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Routes } from "react-router";
+import { routes } from "./routes/Router";
+import { Paper } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className={"header"}>
+        <a href={"https://github.com/VladVen"}>VladVen</a>
       </header>
+      <Paper className={"paper"}>
+        <Routes>
+          {routes.map(({ path, element }, key) => {
+            return <Route path={path} element={element} key={key} />;
+          })}
+        </Routes>
+      </Paper>
+      <footer className={"footer"}>2023</footer>
     </div>
   );
 }

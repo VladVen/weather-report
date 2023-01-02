@@ -1,0 +1,24 @@
+* {
+  text-decoration: none;
+}
+
+.paper {
+  background: #ebebeb !important;
+  margin-top: 10px;
+  padding: 15px 25px;
+  max-width: 400px;
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.iconPart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rightSide > div {
+  text-align: end;
+}
